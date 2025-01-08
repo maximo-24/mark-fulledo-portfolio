@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "DEVELOPING THROUGH IMAGINATION",
     "DEPLOYING POWERFUL CREATION"
   );
-  var iSpeed = 25;
+  var iSpeed = 16;
   var iIndex = 0;
   var iArrLength = aText[0].length;
   var iScrollAt = 20; 
@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   var sContents = '';
   var iRow; 
 
-  // Show buttons and social icons immediately
   const downloadButton = document.getElementById('downloadButton');
   const projectsButton = document.getElementById('goToProjectsButton');
   const socialIcons = document.getElementById('socialIcons');
@@ -59,27 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   typewriter();
 });
-
-  document.getElementById('downloadButton').addEventListener('click', function () {
-    const link = document.createElement('a');
-    link.href = 'http://localhost:5173/asssets/resources/my_cv.pdf';
-    link.download = 'mark_fulledo_cv.pdf'; 
-    
-
-    fetch(link.href)
-      .then((response) => {
-        if (response.ok) {
-          link.click();
-        } else {
-          console.error('Failed to fetch the file:', response.status, response.statusText);
-          alert('Failed to download the file. Please check the file path or try again later.');
-        }
-      })
-      .catch((error) => {
-        console.error('Error fetching the file:', error);
-        alert('An error occurred while trying to download the file.');
-      });
-  });
 
   particlesJS("particles-js", {
     particles: {
@@ -208,7 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((entry) => {
         // Check if the element is in view
         if (entry.isIntersecting) {
-          // Add the correct animation class depending on the type
           if (entry.target.classList.contains("fade")) {
             entry.target.classList.add("fade-in");
             entry.target.classList.remove("fade-out");
@@ -250,7 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
             entry.target.classList.remove("flash-out");
           }
         } else {
-          // Remove the animation classes when the element is out of view
           if (entry.target.classList.contains("fade")) {
             entry.target.classList.add("fade-out");
             entry.target.classList.remove("fade-in");
@@ -295,13 +271,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.1, // Trigger when 10% of the element is visible
+      threshold: 0.1,
     }
   );
 
-  // Add all animated elements to the observer
   animatedElements.forEach((element) => {
-    element.classList.add("out-of-view"); // Ensure animations start in the "out of view" state
+    element.classList.add("out-of-view");
     observer.observe(element);
   });
 });
