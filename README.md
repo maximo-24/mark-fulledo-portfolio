@@ -9,8 +9,6 @@ This is a personal portfolio website showcasing my skills, projects, certificati
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -52,6 +50,3 @@ To get a local copy of this project running, follow these steps:
 Open the index.html file in any browser (Google Chrome, Firefox, etc.).
 The portfolio will load with the smooth animations and a responsive design that adapts to all screen sizes.
 Click on the sections in the navigation bar to jump to different areas like Projects, Certifications, and Experience.
-
-## Contributing
-Contributions are always welcome! If you'd like to improve the project or report an issue, please feel free to open a pull request or an issue.
