@@ -1,4 +1,4 @@
-# Mark Fulledo - Portfolio
+# Mark Fulledo - Simple Portfolio
 
 This is a personal portfolio website showcasing my skills, projects, certifications, and experience. It is built using HTML, CSS, and JavaScript, with some additional animations to enhance the user experience.
 
