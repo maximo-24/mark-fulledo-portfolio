@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="asssets\img\logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mark Angelo Folledo's Portfolio</title>
     
     <!-- Google Fonts -->
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap JS and dependencies -->
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
@@ -61,11 +61,10 @@
           <span id="typedtext" class="type animate pop-up"></span>
           
            <!-- Download CV Button -->
-          <a class="button-container animate slide-in">
+           <a class="button-container animate slide-in">
             <a href="https://drive.google.com/file/d/1Ne14IXo4ODvqSRwyKw7aWd1gnnGc9rYP/view?usp=sharing" id="downloadButton" class="btn btn-outline-dark glow-button animate slide-in">
               <i class="fas fa-download"></i> Download CV
             </a>
-    
             <!-- Go to Projects Button -->
             <a href="#projects" id="goToProjectsButton" class="btn btn-outline-dark glow-button animate slide-in">
               <i class="fas fa-project-diagram"></i> Go to Projects
@@ -126,7 +125,7 @@
               A passionate web developer with expertise in creating dynamic and user-friendly websites. I love solving complex problems and crafting intuitive designs that delight users. With a solid foundation in front-end and back-end technologies, I specialize in building responsive, high-performance websites and applications.
             </p>
             <h3 class="animate zoom-in">Technical Fundamental Skills</h3>
-            <ul class="skills-list animate slide-in">
+            <ul class="skills-list animate zoom-in">
               <img 
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" 
               alt="java" 
@@ -197,18 +196,41 @@
         <h2 class="certificate-header animate pop-up">CERTIFICATES</h2>
         <div class="certificate-container">
           <div class="certificate-card animate zoom-in">
-            <img src="asssets\img\sample_cert.jpg" alt="Certificate 1" class="certificate-image"> 
+            <img 
+              src="asssets\img\cert1.jpg" 
+              alt="Certificate 1" 
+              class="certificate-image"
+              onload="this.style.visibility='visible';"
+              loading="lazy"
+            > 
           </div>
           <div class="certificate-card animate zoom-in">
-            <img src="asssets\img\sample_cert.jpg" alt="Certificate 2" class="certificate-image">
+            <img 
+              src="asssets\img\cert2.jpg" 
+              alt="Certificate 2" 
+              class="certificate-image"
+              onload="this.style.visibility='visible';"
+              loading="lazy"
+            >
           </div>
           <div class="certificate-card animate zoom-in">
-            <img src="asssets\img\sample_cert.jpg" alt="Certificate 1" class="certificate-image">
+            <img 
+              src="asssets\img\cert3.jpg"
+              alt="Certificate 1" 
+              class="certificate-image"
+              onload="this.style.visibility='visible';"
+              loading="lazy"
+            >
           </div>
           <div class="certificate-card animate zoom-in">
-            <img src="asssets\img\sample_cert.jpg" alt="Certificate 2" class="certificate-image">
+            <img 
+              src="asssets\img\cert4.jpg" 
+              alt="Certificate 2" 
+              class="certificate-image"
+              onload="this.style.visibility='visible';"
+              loading="lazy"
+            >
           </div>
-          <!-- Add more certificate cards as needed -->
         </div>
       </div>
       </div>
@@ -219,6 +241,62 @@
       <div class="container">
         <h2>My Projects</h2>
         <p>Details about my projects will go here...</p>
+        <div class="project-container">
+          <div class="card">
+            <img class="card-img-top" src="asssets\img\cert4.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-dark">Github Source</a>
+              <a href="#" class="btn btn-dark">Live Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="asssets\img\cert4.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-dark">Github Source</a>
+              <a href="#" class="btn btn-dark">Live Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="asssets\img\cert4.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-dark">Github Source</a>
+              <a href="#" class="btn btn-dark">Live Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="asssets\img\cert4.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-dark">Github Source</a>
+              <a href="#" class="btn btn-dark">Live Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="asssets\img\cert4.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-dark">Github Source</a>
+              <a href="#" class="btn btn-dark">Live Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="asssets\img\cert4.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-dark">Github Source</a>
+              <a href="#" class="btn btn-dark">Live Demo</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
