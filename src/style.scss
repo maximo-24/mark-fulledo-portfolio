@@ -721,15 +721,57 @@ canvas {
 }
 
 #contact {
-  padding: 250px 20px;
+  padding: 65px 20px;
   color: black;
   text-align: center;
-}
 
-#contact .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  z-index: 100;
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 100;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.85);
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000000;
+      }
+
+      input, textarea {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: #000000;
+        }
+      }
+    }
+
+
+  }
 }
 
 @media (max-width: 768px) {
@@ -739,8 +781,17 @@ canvas {
   }
 
   .navbar-nav .nav-link {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    text-align: center;
     padding: 10px;
     font-size: 14px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid black; 
   }
 
   .word {
@@ -827,6 +878,20 @@ canvas {
 @media (max-width: 480px) {
   .navbar-nav .nav-link {
     font-size: 12px;
+  }
+
+  .navbar-nav .nav-link {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom: .5px solid black; 
   }
 
   .word {
@@ -961,5 +1026,12 @@ canvas {
     height: 200px;
     max-width: 280px;
     aspect-ratio: 4/3;
+  }
+
+  .navbar-nav .nav-link {
+    &:hover {
+      color: rgba(0, 0, 0, 0.8);
+      border-bottom: 2px solid black;
+    }
   }
 }
