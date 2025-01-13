@@ -328,8 +328,8 @@ canvas {
 }
 
 .glow-button {
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 12px 25px;
+  font-size: 16px;
   font-weight: bold;
   color: #000000;
   background-color: transparent;
@@ -471,6 +471,7 @@ canvas {
   color: black;
   font: 700 normal 2.5em 'tahoma';
   min-height: 2em;
+  text-align: left;
 }
 
 .button-container {
@@ -572,19 +573,23 @@ canvas {
 
 .card-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   margin-top: 20px;
+  padding: 0 15px;
 }
 
 .card {
   background-color: rgba(255, 255, 255, 0.85);
   color: black;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-align: center;
   flex: 1;
+  min-width: 100px;
+  max-width: 100%;
 }
 
 .card p {
@@ -619,25 +624,31 @@ canvas {
 .certificate-section {
   margin-top: 5em;
   text-align: center;
+  padding: 0 15px;
 }
 
 .certificate-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .certificate-card {
   background-color: rgba(255, 255, 255, 0.85);
   color: black;
-  height: 350px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-align: center;
-  width: 450px;
+  width: calc(33.333% - 20px);
+  min-width: 300px;
+  max-width: 450px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 10px;
+  margin: 0;
+  aspect-ratio: 4/3;
 }
 
 .certificate-card:hover {
@@ -648,7 +659,7 @@ canvas {
 .certificate-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: contain;
   visibility: hidden;
 }
 
@@ -721,3 +732,234 @@ canvas {
   z-index: 100;
 }
 
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .word {
+    margin: auto;
+    color: black;
+    font: 500 normal 1.5em 'tahoma';
+    min-height: 2em;
+    font-weight: bolder;
+    text-align: left;
+  }
+
+  #home .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container, .right-container {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  .card-container {
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .card {
+    flex: 0 1 calc(50% - 15px);
+    min-width: 200px;
+    padding: 12px;
+  }
+
+  .certificate-container {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .certificate-card {
+    width: calc(50% - 10px);
+    min-width: 280px;
+    aspect-ratio: 4/3;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  #projects .card {
+    max-width: 100%;
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .glow-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 5px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-nav .nav-link {
+    font-size: 12px;
+  }
+
+  .word {
+    margin: auto;
+    color: black;
+    font: 300 normal 1.3em 'tahoma';
+    min-height: 2em;
+    font-weight: bolder;
+    text-align: left;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .skills-list img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card h4, .card p {
+    font-size: 12px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .glow-button {
+    padding: 8px 16px;
+    font-size: 12px;
+    width: 80%;
+    max-width: 250px;
+    margin: 3px 0;
+  }
+
+  .card-container {
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .card {
+    flex: 0 1 100%;
+    min-width: unset;
+    padding: 10px;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  #projects .card {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card h4 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .certificate-section {
+    padding: 0 10px;
+  }
+
+  .certificate-container {
+    gap: 15px;
+  }
+
+  .certificate-card {
+    width: 100%;
+    min-width: unset;
+    max-width: 350px;
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (max-width: 320px) {
+  .glow-button {
+    width: 90%;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .card h4 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  #projects .card {
+    max-width: 250px;
+  }
+
+  #projects .card-img-top {
+    max-height: 10rem;
+  }
+
+  #projects .card-title {
+    font-size: 1rem;
+  }
+
+  #projects .card-text {
+    font-size: 0.8rem;
+  }
+
+  .certificate-section {
+    padding: 0 5px;
+  }
+
+  .certificate-container {
+    gap: 10px;
+  }
+
+  .certificate-card {
+    height: 200px;
+    max-width: 280px;
+    aspect-ratio: 4/3;
+  }
+}
