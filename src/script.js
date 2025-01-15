@@ -184,99 +184,185 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        // Check if the element is in view
-        if (entry.isIntersecting) {
-          if (entry.target.classList.contains("fade")) {
-            entry.target.classList.add("fade-in");
-            entry.target.classList.remove("fade-out");
+        setTimeout(() => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains("fade")) {
+              entry.target.classList.remove("fade-out");
+              entry.target.classList.add("fade-in");
+            }
+            if (entry.target.classList.contains("pop-up")) {
+              entry.target.classList.remove("pop-out");
+              entry.target.classList.add("pop-up-animation");
+            }
+            if (entry.target.classList.contains("slide-in")) {
+              entry.target.classList.remove("slide-out");
+              entry.target.classList.add("slide-in-animation");
+            }
+            if (entry.target.classList.contains("zoom-in")) {
+              entry.target.classList.remove("zoom-out");
+              entry.target.classList.add("zoom-in-animation");
+            }
+            if (entry.target.classList.contains("bounce")) {
+              entry.target.classList.remove("bounce-out");
+              entry.target.classList.add("bounce-animation");
+            }
+            if (entry.target.classList.contains("rotate")) {
+              entry.target.classList.remove("rotate-out");
+              entry.target.classList.add("rotate-in");
+            }
+            if (entry.target.classList.contains("flip")) {
+              entry.target.classList.remove("flip-out");
+              entry.target.classList.add("flip-in");
+            }
+            if (entry.target.classList.contains("shake")) {
+              entry.target.classList.remove("shake-out");
+              entry.target.classList.add("shake-animation");
+            }
+            if (entry.target.classList.contains("wobble")) {
+              entry.target.classList.remove("wobble-out");
+              entry.target.classList.add("wobble-animation");
+            }
+            if (entry.target.classList.contains("flash")) {
+              entry.target.classList.remove("flash-out");
+              entry.target.classList.add("flash-animation");
+            }
+          } else {
+            if (entry.target.classList.contains("fade")) {
+              entry.target.classList.remove("fade-in");
+              entry.target.classList.add("fade-out");
+            }
+            if (entry.target.classList.contains("pop-up")) {
+              entry.target.classList.remove("pop-up-animation");
+              entry.target.classList.add("pop-out");
+            }
+            if (entry.target.classList.contains("slide-in")) {
+              entry.target.classList.remove("slide-in-animation");
+              entry.target.classList.add("slide-out");
+            }
+            if (entry.target.classList.contains("zoom-in")) {
+              entry.target.classList.remove("zoom-in-animation");
+              entry.target.classList.add("zoom-out");
+            }
+            if (entry.target.classList.contains("bounce")) {
+              entry.target.classList.remove("bounce-animation");
+              entry.target.classList.add("bounce-out");
+            }
+            if (entry.target.classList.contains("rotate")) {
+              entry.target.classList.remove("rotate-in");
+              entry.target.classList.add("rotate-out");
+            }
+            if (entry.target.classList.contains("flip")) {
+              entry.target.classList.remove("flip-in");
+              entry.target.classList.add("flip-out");
+            }
+            if (entry.target.classList.contains("shake")) {
+              entry.target.classList.remove("shake-animation");
+              entry.target.classList.add("shake-out");
+            }
+            if (entry.target.classList.contains("wobble")) {
+              entry.target.classList.remove("wobble-animation");
+              entry.target.classList.add("wobble-out");
+            }
+            if (entry.target.classList.contains("flash")) {
+              entry.target.classList.remove("flash-animation");
+              entry.target.classList.add("flash-out");
+            }
           }
-          if (entry.target.classList.contains("pop-up")) {
-            entry.target.classList.add("pop-up-animation");
-            entry.target.classList.remove("pop-out");
-          }
-          if (entry.target.classList.contains("slide-in")) {
-            entry.target.classList.add("slide-in-animation");
-            entry.target.classList.remove("slide-out");
-          }
-          if (entry.target.classList.contains("zoom-in")) {
-            entry.target.classList.add("zoom-in-animation");
-            entry.target.classList.remove("zoom-out");
-          }
-          if (entry.target.classList.contains("bounce")) {
-            entry.target.classList.add("bounce-animation");
-            entry.target.classList.remove("bounce-out");
-          }
-          if (entry.target.classList.contains("rotate")) {
-            entry.target.classList.add("rotate-in");
-            entry.target.classList.remove("rotate-out");
-          }
-          if (entry.target.classList.contains("flip")) {
-            entry.target.classList.add("flip-in");
-            entry.target.classList.remove("flip-out");
-          }
-          if (entry.target.classList.contains("shake")) {
-            entry.target.classList.add("shake-animation");
-            entry.target.classList.remove("shake-out");
-          }
-          if (entry.target.classList.contains("wobble")) {
-            entry.target.classList.add("wobble-animation");
-            entry.target.classList.remove("wobble-out");
-          }
-          if (entry.target.classList.contains("flash")) {
-            entry.target.classList.add("flash-animation");
-            entry.target.classList.remove("flash-out");
-          }
-        } else {
-          if (entry.target.classList.contains("fade")) {
-            entry.target.classList.add("fade-out");
-            entry.target.classList.remove("fade-in");
-          }
-          if (entry.target.classList.contains("pop-up")) {
-            entry.target.classList.add("pop-out");
-            entry.target.classList.remove("pop-up-animation");
-          }
-          if (entry.target.classList.contains("slide-in")) {
-            entry.target.classList.add("slide-out");
-            entry.target.classList.remove("slide-in-animation");
-          }
-          if (entry.target.classList.contains("zoom-in")) {
-            entry.target.classList.add("zoom-out");
-            entry.target.classList.remove("zoom-in-animation");
-          }
-          if (entry.target.classList.contains("bounce")) {
-            entry.target.classList.add("bounce-out");
-            entry.target.classList.remove("bounce-animation");
-          }
-          if (entry.target.classList.contains("rotate")) {
-            entry.target.classList.add("rotate-out");
-            entry.target.classList.remove("rotate-in");
-          }
-          if (entry.target.classList.contains("flip")) {
-            entry.target.classList.add("flip-out");
-            entry.target.classList.remove("flip-in");
-          }
-          if (entry.target.classList.contains("shake")) {
-            entry.target.classList.add("shake-out");
-            entry.target.classList.remove("shake-animation");
-          }
-          if (entry.target.classList.contains("wobble")) {
-            entry.target.classList.add("wobble-out");
-            entry.target.classList.remove("wobble-animation");
-          }
-          if (entry.target.classList.contains("flash")) {
-            entry.target.classList.add("flash-out");
-            entry.target.classList.remove("flash-animation");
-          }
-        }
+        }, 50);
       });
     },
     {
       threshold: 0.1,
+      rootMargin: "40px", 
     }
   );
 
   animatedElements.forEach((element) => {
-    element.classList.add("out-of-view");
+    if (element.classList.contains("fade")) {
+      element.classList.add("fade-out");
+    }
+    if (element.classList.contains("pop-up")) {
+      element.classList.add("pop-out");
+    }
+    if (element.classList.contains("slide-in")) {
+      element.classList.add("slide-out");
+    }
+    if (element.classList.contains("zoom-in")) {
+      element.classList.add("zoom-out");
+    }
+    if (element.classList.contains("bounce")) {
+      element.classList.add("bounce-out");
+    }
+    if (element.classList.contains("rotate")) {
+      element.classList.add("rotate-out");
+    }
+    if (element.classList.contains("flip")) {
+      element.classList.add("flip-out");
+    }
+    if (element.classList.contains("shake")) {
+      element.classList.add("shake-out");
+    }
+    if (element.classList.contains("wobble")) {
+      element.classList.add("wobble-out");
+    }
+    if (element.classList.contains("flash")) {
+      element.classList.add("flash-out");
+    }
+    
     observer.observe(element);
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  const confirmationDialog = document.getElementById('confirmationDialog');
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  const submitButton = document.getElementById('submitButton');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    contactForm.classList.add('form-loading');
+    submitButton.classList.add('btn-loading');
+    loadingSpinner.style.display = 'block';
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        
+        loadingSpinner.style.display = 'none';
+        submitButton.classList.remove('btn-loading');
+        contactForm.classList.remove('form-loading');
+        
+        confirmationDialog.classList.add('active');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('There was an error sending your message. Please try again later.');
+      
+      loadingSpinner.style.display = 'none';
+      submitButton.classList.remove('btn-loading');
+      contactForm.classList.remove('form-loading');
+    }
+  });
+});
+
+function closeDialog() {
+  const confirmationDialog = document.getElementById('confirmationDialog');
+  const contactForm = document.getElementById('contactForm');
+  
+  confirmationDialog.classList.remove('active');
+  contactForm.reset();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
 });
